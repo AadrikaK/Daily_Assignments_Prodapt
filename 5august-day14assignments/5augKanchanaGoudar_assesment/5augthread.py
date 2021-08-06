@@ -1,32 +1,33 @@
-import threading,time
-def Prime():
-    for i in range(10,500):
-        for j in range(2,i):
+import threading,time,logging
+try:
+    def Prime():
+        for i in range(10,500):
             time.sleep(1)
-            if(i%j==0):
-                break
-        else:
-            print(i,"prime number")
-
+            for j in range(2,i):
+                if(i%j==0):
+                    break
+            else:
+                print(i,"prime number")
+    def palindrome():
+        for i in range(10,500):
+            temp=i
+            rev=0
+            while i>0:
+                time.sleep(1)
+                rem=i%10
+                rev=rev*10+rem
+                i=i//10
+            if temp==rev:
+                print(temp,"palindrome")
         
-    def palindrome(number):
-        temp=number
-        rev=0
-        while number>0:
-            time.sleep(1)
-            rem=number%10
-            rev=rev*10+rem
-            number=number//10
-        if temp==rev:
-            print("palindrome")
-        
-        else:
-            print("not a palindrome")
-number=int(input("Enter the number to check it is palindrome number or not:"))
-t1=threading.Thread(target=Prime)
-t2=threading.Thread(target=palindrome,args=(number,))
-t1.start()
-t2.start()
-t1.join()
-t1.join()
-print(".........")
+            else:
+                print(temp,"not a palindrome")
+    if(__name__=="__main__"):
+        t1=threading.Thread(target=Prime)
+        t2=threading.Thread(target=palindrome)
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+except:
+    logging.error("Can not able to process")
