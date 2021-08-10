@@ -1,0 +1,1 @@
+This is my first mini project implementing the concepts of python which i have learnt till now.
