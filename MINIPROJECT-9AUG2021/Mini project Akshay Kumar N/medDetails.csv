@@ -1,0 +1,5 @@
+rno,medname,price,mfgdate,expdate,type,uses,added_time
+06,Medomol,60,18/06/2020,19/09/2021,Paracetomol,Fever,20:25:50
+09,Fabiflu,90,22/11/2020,22/12/2021,Antibiotic,Covid,20:26:33
+10,Calpol,100,18/09/2020,09/08/2021,Antibiotic,Cold,20:27:20
+19,Ceeplus,300,10/01/2020,19/12/2021,Vitamin C Capsules,For Vitamins,20:28:45
