@@ -1,0 +1,54 @@
+{% extends 'header.html'  %}
+{%  block content  %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+
+        <form action="http://127.0.0.1:8000/trains/searchtrain/" method="post">
+        <table class="table table-borderless">
+            <tr>
+                <td> <b>Train Number</b> </td>
+                <td> <input name="trainNumber" type="text" class="form-control" placeholder="Enter train number to search"> </td>
+            </tr>
+            <tr>
+                <td>  </td>
+                <td> <center> <button type="submit" class="btn btn-success"> Search </button> </center> </td>
+            </tr>
+        </table>
+      </form>
+      {% if data  %}
+      <table class="table table-stripes">
+        <thead class="table-dark">
+          <tr>
+            <th> Train Name </th>
+            <th> Train Number </th>
+            <th> From Station </th>
+            <th> To Station </th>
+            <th> Running Days </th>
+        </tr>
+        </thead>
+
+        <tbody>
+          {% for i in data  %}
+          <tr>
+            <td> {{ i.trainName }} </td>
+            <td> {{ i.trainNumber }} </td>
+            <td> {{ i.fromStation }} </td>
+            <td> {{ i.toStation }} </td>
+            <td> {{ i.runningDays }} </td>          
+        </tr>
+        {% endfor %}
+
+
+        </tbody>
+      </table>
+      {% endif %}
+    </div>
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+{%  endblock  %}
+
+    

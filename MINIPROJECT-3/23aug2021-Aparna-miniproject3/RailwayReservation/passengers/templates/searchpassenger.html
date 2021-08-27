@@ -1,0 +1,62 @@
+{% extends 'head.html'  %}
+{%  block content  %}
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+
+        
+        <br><br>
+        <form action="http://127.0.0.1:8000/passengers/searchpassenger/" method="post">
+        <table class="table table-borderless">
+            <tr>
+                <td> <b>Username</b> </td>
+                <td> <input name="username" type="text" class="form-control" placeholder="Enter username to search"> </td>
+            </tr>
+            <tr>
+                <td>  </td>
+                <td> <center> <button type="submit" class="btn btn-info"> SEARCH </button> </center> </td>
+            </tr>
+        </table>
+      </form>
+      {% if data  %}
+      <table class="table table-stripes">
+        <thead class="table-dark">
+          <tr>
+            <th> First Name </th>
+            <th> Last Name </th>
+            <th> Gender </th>
+            <th> email </th>
+            <th> Mobile Number </th>
+            <th> Username </th>
+            <th> Password </th>
+            <th> Confirm Password </th>
+        </tr>
+        </thead>
+
+        <tbody>
+          {% for i in data  %}
+          <tr>
+            <td> {{ i.firstName }} </td>
+            <td> {{ i.lastName }} </td>
+            <td> {{ i.gender }} </td>
+            <td> {{ i.email }} </td>
+            <td> {{ i.mobileNumber }} </td>          
+            <td> {{ i.username }} </td>          
+            <td> {{ i.password }} </td>          
+            <td> {{ i.confirm_password }} </td>          
+        </tr>
+        {% endfor %}
+
+
+        </tbody>
+      </table>
+      {% endif %}
+    </div>
+    <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+  </div>
+</div>
+{%  endblock  %}
+
+    

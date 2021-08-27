@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains</title>
+    <style>
+      body {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSzXR5NMI3k6bT3rAq3ry-3bTnMmx-9HrymIFCE19Jk52sOxl3YSZ5wKyBSFIKTmrTSw&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKV4Fg-b7_ZCK8x8A6xp1TBt21wyzhJSmOh5Zw73SsepPDWO0ZOcPuyQBFe7lPsjyd-18&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmaikbHNiOiWoj5X09CLAyljWQ2MkNMZM5UqiVNtmCfi2FleJsGZiSl4QbOZni9EjaP4&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyuwTggZl58lR6uCrv1hSg6O8LlNuqrE2q6Q&usqp=CAU);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="http://127.0.0.1:8000/trains/home">HOME</a>
+            <a class="nav-item nav-link active" href="../add/">Register</a>
+            <a class="nav-item nav-link active" href="../viewall/">Viewpassengers</a>
+            <a class="nav-item nav-link" href="../bookticket/">Book Ticket</a>
+            <a class="nav-item nav-link" href="../search/">SearchPassenger</a>
+            <!-- <a class="nav-item nav-link" href="../update/">Update Passenger</a>
+            <a class="nav-item nav-link" href="../delete/">Delete Passenger</a> -->
+          </div>
+        </div>
+      </nav>
+      <br><br>
+
+      <center> <marquee behavior="scroll" direction="left" scrollamount="20" ><h1 style="color: black;"> RAILWAY RESERVATION SYSTEM </h1></marquee> </center> <br><br>
+
+
+     {% block content %}
+
+
+     {% endblock %}
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiSzXR5NMI3k6bT3rAq3ry-3bTnMmx-9HrymIFCE19Jk52sOxl3YSZ5wKyBSFIKTmrTSw&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKV4Fg-b7_ZCK8x8A6xp1TBt21wyzhJSmOh5Zw73SsepPDWO0ZOcPuyQBFe7lPsjyd-18&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmaikbHNiOiWoj5X09CLAyljWQ2MkNMZM5UqiVNtmCfi2FleJsGZiSl4QbOZni9EjaP4&usqp=CAU://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyuwTggZl58lR6uCrv1hSg6O8LlNuqrE2q6Q&usqp=CAU -->
+
