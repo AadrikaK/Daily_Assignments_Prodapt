@@ -4,6 +4,9 @@ from django.db import models
 class customer(models.Model):
     name = models.CharField(max_length=50, default = '')
     add = models.CharField(max_length=50, default = '')
-    pincode = models.IntegerField(default='')
     email= models.CharField(max_length=50, default = '')
-    phone =models.BigIntegerField(default='')
+    phone =models.CharField(max_length=50, default = '')
+    password = models.CharField(max_length=50, default='')
+    cnfrmpass = models.CharField(max_length=50, default='')
+    #id = models.AutoField(auto_created=True, primary_key=True, serialize=False, default='')
+

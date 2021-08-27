@@ -5,4 +5,4 @@ from invitations.models import customer
 class cusSerializer(serializers.ModelSerializer):
     class Meta:
         model = customer
-        fields = ('name', 'add', 'pincode', 'email', 'phone')
+        fields = ("name", "add", "email", "phone","password","cnfrmpass")

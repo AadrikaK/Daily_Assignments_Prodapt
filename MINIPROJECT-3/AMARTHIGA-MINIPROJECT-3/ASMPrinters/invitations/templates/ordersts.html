@@ -6,24 +6,38 @@
     <div class="row">
         <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
-            <form action="" method="post">
+            
+            <form action="http://127.0.0.1:8000/asm/status/" method="post">
                 <table class="table table-borderless">
                     <tr>
-                        <td>Order Number</td>
-                        <td><input type="text" class="form-control" placeholder="Enter your order number"></td>
+                        <td>Email ID</td>
+                        <td><input name= "email" type="text" class="form-control" placeholder="Enter your email address"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><button class="btn btn-success">Search</button></td>
+                        <td><button type ="submit" class="btn btn-success">Get Status</button></td>
                     </tr>
-    
-    
     
                 </table>
                 </form>
         
-        
+{% if data %}
+<table class="table table-borderless">
+    {% for i in data %}
+    <tr>
+        <td style = "color:rgb(128, 2, 2);"> <b> Customer Name</b></td>
+        <td>{{i.name}}</td>
+    </tr>
+    <tr>
+        <td style = "color:rgb(128, 2, 2);"><b>Delivery Addres</b></td>
+        <td>{{i.add}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
     
+
         
        </div> 
     

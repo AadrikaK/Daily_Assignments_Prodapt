@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'ASMPrinters.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'ASMDataBase',
+        'CLIENT':{'host':'mongodb+srv://Amar_24:Amar2421@cluster0.g6gs1.mongodb.net',
+        'username':'Amar_24',
+        'password':'Amar2421',
+        }
     }
 }
 
