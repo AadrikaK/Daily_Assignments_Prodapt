@@ -1,0 +1,88 @@
+{% extends "try.html" %}
+
+{% block myCode %}
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+      <center><h3><b>Bill Generation</b></h3></center>
+           <form action="http://127.0.0.1:8000/VoizFonica/searchapi2/" method="post">
+            <table class="table table-borderless">
+                <tr>
+                    <td>Enter Customer Mobile number</td>
+                    <td><input name="mobile" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-success">GENERATE BILL</button></td>
+                </tr>
+                
+            </table></form>
+        {% if data %}
+            <table class="table ">
+                {% for i in data %}
+                   <tr>
+                            <td>Current date time</td>
+                            <td>{{i.currdate}}</td>
+                        </tr>
+                <tr>
+                    <td >current plan charges</td>
+                    <td>RS {{ i.curplancharge }}</td>
+                   
+                </tr>
+                <tr>
+                    <td >Extra Call Charges</td>
+                    <td>RS {{ i.extracallcharge}}</td>
+                    
+                </tr>
+                <tr>
+                    <td >Extra SMS Charges</td>
+                    <td>RS {{ i.extrasmscharge }}</td>
+                    
+                </tr>
+                <tr>
+                    <td >Extra Data Charges</td>
+                    <td>RS {{ i.extradatacharges }}</td>
+                    
+                </tr>
+                <tr>
+                    <td >Total Amount</td>
+                    <td>RS {{ i.totalamount }}</td>
+                    
+                </tr>
+                <tr>
+                    <td ></td>
+                    <td><a href='http://127.0.0.1:8000/VoizFonica/customeremail/'>
+                        <button class="GFG">
+                            SEND BILL
+                        </button>
+                    </a></td>
+                    
+                </tr>
+                {% endfor %}
+            </table>
+
+
+
+
+
+
+
+        {% endif %}
+        
+        </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            
+            
+            
+            
+           
+
+
+
+
+    </div>
+</div>
+{% endblock  %}
+    

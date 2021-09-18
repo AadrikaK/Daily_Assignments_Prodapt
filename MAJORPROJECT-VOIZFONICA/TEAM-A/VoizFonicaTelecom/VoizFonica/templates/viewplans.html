@@ -1,0 +1,95 @@
+{% extends 'services.html' %}
+
+{% block postpaid %}
+<br>
+
+<h2><center>PREPAID PLANS</center></h2>
+<br>
+
+
+
+
+ 
+ <!-- <div class="main"> -->
+
+    
+    {% for i in data %}
+   <div class="card">
+   
+   <div class="image">
+      <img src="/static/images/card1.jpg">
+   </div>
+   <div class="title">
+    <h1>
+       {{ i.prename }}</h1>
+   </div>
+   <div class="des">
+    <p>
+       <li>Plan Amount: {{ i.preamount }}</li>
+       <li>Validity : {{ i.prevalidity }}</li>
+   
+       <li>Benifits :{{ i.prebenefits }}</li>
+       <li>Offers :{{i.preofferdiscount }}</li>
+    </p>
+    <a href="http://127.0.0.1:8000/VoizFonica/recharge/"><button>Next</button></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+   </div>
+   
+   {% endfor %}
+   
+   <!-- </div> -->
+
+          
+
+
+{% endblock %}

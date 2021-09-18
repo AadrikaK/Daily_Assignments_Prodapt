@@ -1,0 +1,54 @@
+{% extends 'billheader.html' %}
+{% block mycontent %}
+<title>addusage page</title>
+ <body style="background-color:lightsteelblue">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xxl-8">
+                <form action="http://127.0.0.1:8000/VoizFonica/addbill/" method="post">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Mobile number</td>
+                            <td><input name="mobile" type="number" class="form-control"></td>
+                        </tr>
+                       <tr>
+                            <td>current plan charges</td>
+                            <td><input name="curplancharge" type="number" class="form-control"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Extracall Charges</td>
+                            <td><input type="number" name="extracallcharge"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Extrams  Charges</td>
+                            <td><input type="number" name="extrasmscharge"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Extradata Charges</td>
+                            <td><input type="number" name="extradatacharges"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Amount</td>
+                            <td><input type="number" name="totalamount"class="form-control"></td>
+                        </tr>
+                          <tr>
+                            <td></td>
+                            <td><input type="hidden" name="currdate"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="btn btn-success">ADD</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+

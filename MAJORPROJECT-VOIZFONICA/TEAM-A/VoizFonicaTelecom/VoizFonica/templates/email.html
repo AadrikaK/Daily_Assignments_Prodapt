@@ -1,0 +1,31 @@
+{% extends 'try.html' %}
+{% block myCode %}
+<body>
+   <form action="../emailapi/" method="post" enctype="multipart/form-data">
+   {% csrf_token %} 
+   <center> <table>
+        <tr>
+            <td>Email</td>
+            <td><input name="email" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>Subject</td>
+            <td><input name="subject" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>message</td>
+            <td><input name="message" type="text" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>file</td>
+            <td><input name="file" type="file" class="form-control"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class="btn btn-success">Send</button></td>
+        </tr>
+     </table></center>
+   </form>
+</body>
+</html>
+{% endblock %}

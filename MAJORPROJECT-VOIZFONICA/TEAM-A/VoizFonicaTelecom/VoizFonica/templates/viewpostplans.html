@@ -1,0 +1,45 @@
+{% extends 'services.html' %}
+
+{% block postpaid %}
+<br>
+
+<h2><center>POSTPAID PLANS</center></h2>
+<br>
+
+
+
+
+ 
+ <div class="main">
+
+    
+    {% for i in postdata %}
+   <div class="card">
+   
+   <div class="image">
+      <img src="/static/images/card1.jpg">
+   </div>
+   <div class="title">
+    <h1>
+       {{ i.postname }}</h1>
+   </div>
+   <div class="des">
+    <p>
+       <li>Plan Amount: {{ i.postamount }}</li>
+       <li>Validity : {{ i.postvalidity }}</li>
+   
+       <li>Benifits :{{ i.postbenefits }}</li>
+       <li>Offers :{{i.postofferdiscount }}</li>
+    </p>
+   <button>Next</button>
+   </div>
+   </div>
+   
+   {% endfor %}
+   
+   </div>
+
+          
+
+
+{% endblock %}

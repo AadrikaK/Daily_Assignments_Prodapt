@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Admin Page</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/try.css" rel="stylesheet" />
+    </head>
+    <body style="background-image: linear-gradient(blue,white);">
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-secondary" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-primary"><b>ADMIN</b></div>
+                <div class="list-group list-group-flush">
+                    
+                      <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../manageplans/">Manage plans</a>
+                      <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../managecustomers/">Manage customers</a>
+                    <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../viewhtmlquery/">View Queries</a>
+                    <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../up/">Resolve Queries</a>
+                    <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../searchadminusage/">Bill Generation</a>
+                    <a class="list-group-item list-group-item-action list-group-item-info p-3" href="../billview/">View Customer Bills</a>
+                   
+
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-secondary bg-secondary border-bottom">
+                    <div class="container-fluid">
+                      
+                        <button class="btn btn-primary" id="sidebarToggle">Menu</button>
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="http://127.0.0.1:8000/VoizFonica/home/"><b>Home</b></a></li>
+ 
+                                <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/VoizFonica/lo/"><b>LOGOUT</b></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                   {% block myCode %}
+                   <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <img src="/static/images/logo.jpeg" alt="" style="width:700px; height: 350px; padding-left: 300px; padding-top: 180px;">
+                        
+                    </div>
+                  </div>
+                </div>
+
+                   {% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/admindash.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    </body>
+</html>

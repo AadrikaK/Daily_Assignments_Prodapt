@@ -1,0 +1,231 @@
+
+    <!-----CodingHindi-->
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>FAQ</title>
+            <link rel="stylesheet"        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+        <style>
+    
+    *{
+        padding:0;
+        margin:0;
+        box-sizing:border-box;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-size:12px;
+    
+    }
+    .fondo{
+        width:100%;
+        height:100%;
+        /* background:linear-gradient(hsl(273,75%,66%), hsl(240, 73%,65%)); */
+        background-color: skyblue;
+        padding:130px 0;
+    }
+    .cuerpo{
+        width:85%;
+        background:white;
+        border-radius:20px;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding:0 15px 30px 15px;
+    }
+    .img{
+        width:200px;
+        position:relative;
+        top: -90px;
+        filter: drop-shadow(0 25px 0px #E1D6F6);
+    }
+    .titulo{
+        text-align:center;
+        color: hsl(238,29%, 16%);
+        font-size:25px;
+        font-weight:700;
+        
+    }
+    .pregunta{
+        color:hsl(237,12%, 33%);
+        display:inline-block ;
+        font-weight:500;
+        font-size:20px;
+        padding:20px 0;
+    }
+    .parrafo{
+        color:hsl(240,6%, 50%);
+        line-height:17px;
+        padding-bottom:20px;
+        position:relative;
+        top:-20px;
+        opacity:0;
+        transition:top 1s, opacity 1s;
+        z-index:1;
+        font-size: 15px;
+    }
+    .lista{
+        list-style:none;
+        
+    }
+    .item_header{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items:center;
+        position:relative ;
+        z-index:2;
+        
+    }
+    .item{
+        border-bottom:1px solid #E6E6E9;
+    }
+    .icon{
+        color: hsl(14,88%,65%);
+        transition:transform 1s;
+    }
+    li{
+       height:54px;
+       overflow:hidden;
+       transition:all 1s;
+       
+    }
+    
+    .active > .item_header> .pregunta{
+        font-weight:bold;
+       
+    }
+    .active > .item_header> .icon{
+        transform: rotate(180deg);
+        
+    }
+    .active> .parrafo{
+        opacity:1;
+        top:0;
+    }
+
+    .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+  
+        </style>
+        </head>
+        <body>
+            <div class= "fondo">
+                <div class= "cuerpo">
+                    <img src="https://raw.githubusercontent.com/luamoris/react-faq-card-info/a8bb6248c30bae08f077566df122ac83c23a3532/src/img/illustration-woman-online-desktop.svg" class= "img">
+                    
+                    <div class="texto">
+                        <h3 class= "titulo">FAQ's</h3>
+                        <ul class= "lista">
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">How do I contact customer care?</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                               
+                                   <p class= "parrafo">In case you wish to contact customer care, please call us at 121 for queries/requests and 198 for complaints.Alternatively, you can write to us at voizfonica@gmail.com</p>
+                                
+                            </li>
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">I am unable to use Internet</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                                <p class= "parrafo">Login into your account and in contact us page raise a ticket.</p>
+                            </li>
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">I want to swap/upgrade my sim</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                                <p class= "parrafo">Please visit the nearest Voizfonica Store to swap/upgrade your SIM.</p>
+                            </li>
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">I want to update change my address</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                                <p class= "parrafo">We would be shortly coming up with the feature to change your address online. In the meantime, please visit the nearest VoizFonica Store to get your address changed.</p>
+                            </li>
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">What are current VoizFonica prepaid recharge plan?</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                                <p class= "parrafo">To explore VoizFonica Prepaid Plans, <a href="http://127.0.0.1:8000/voizfonica/prepaidviewonly/">Click Here</a></p>
+                            </li>
+                            <li class= "item">
+                                <div class= "item_header">
+                                    <h4 class= "pregunta">Can I convert from Prepaid to Postpaid and vice versa?</h4>
+                                    <i class= "fa fa-angle-down icon"></i>
+                                </div>
+                                <p class= "parrafo">Yes, you can change your subscription from Prepaid to Post-paid or Post-paid to Prepaid.
+                                    Please visit your nearest VoizFonica store with your valid Original Proof of Address(POA) / Proof of Identity(POI) or Aadhaar card.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            <script>
+            document.querySelectorAll(".item_header").forEach(
+            function(header){
+    
+            header.addEventListener("click",()=>{
+                if(header.parentNode.classList.contains("active")){
+                  header.parentNode.classList.remove("active");
+                  header.parentNode.style.height= "54px";
+                  
+                }
+                else{
+                document.querySelectorAll(".item_header").forEach(
+                function(header){
+                header.parentNode.classList.remove("active");
+                header.parentNode.style.height= "54px"
+                }
+                )              
+                header.parentNode.classList.add("active");
+                let altPar=header.nextElementSibling.scrollHeight;
+                let altura= altPar+54;
+                header.parentNode.style.height= altura + "px";
+     
+                }
+                
+            })
+        }
+    );
+    
+    
+   
+    
+            </script>
+             <a href="http://127.0.0.1:8000/voizfonica/dashboardview/" class="close"></a>
+        </body>
+    </html>
+      
+    
+    

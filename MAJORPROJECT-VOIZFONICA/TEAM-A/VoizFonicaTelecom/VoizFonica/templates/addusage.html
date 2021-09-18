@@ -1,0 +1,51 @@
+{% extends 'billheader.html' %}
+{% block mycontent %}
+<title>addusage page</title>
+ <body style="background-color:lightsteelblue">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-xl-8 col-xxl-8">
+                <form action="http://127.0.0.1:8000/VoizFonica/addusage/" method="post">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Mobile number</td>
+                            <td><input name="mobilen" type="number" class="form-control"></td>
+                        </tr>
+                       <tr>
+                            <td>current plan </td>
+                            <td><input name="curplan" type="text" class="form-control"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Extracall</td>
+                            <td><input type="text" name="extracall"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Extrams</td>
+                            <td><input type="text" name="extrasms"class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Extradata</td>
+                            <td><input type="text" name="extradata"class="form-control"></td>
+                        </tr>
+                        
+                          {% comment %} <tr>
+                            <td></td>
+                            <td><input type="hidden" name="currdate"class="form-control"></td>
+                        </tr> {% endcomment %}
+                        <tr>
+                            <td></td>
+                            <td><button class="btn btn-success">ADD</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+

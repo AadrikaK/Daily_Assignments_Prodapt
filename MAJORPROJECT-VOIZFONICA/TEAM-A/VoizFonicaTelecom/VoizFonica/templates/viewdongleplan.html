@@ -1,0 +1,47 @@
+{% extends 'services.html' %}
+
+{% block postpaid %}
+<br>
+
+<h2><center>DONGLE PLANS</center></h2>
+<br>
+
+
+
+
+ 
+ <div class="main">
+
+    
+    {% for i in dondata %}
+   <div class="card">
+   
+   <div class="image">
+      <img src="/static/images/card1.jpg">
+   </div>
+   <div class="title">
+    <h1>
+       {{ i.planname }}</h1>
+   </div>
+   <div class="des">
+    <p>
+       <li>Plan Name: {{ i.planname }}</li>
+       <li>Plan Amount: {{ i.dongleamount }}</li>
+       <li>Validity : {{ i.donglevalidity }}</li>
+       <li>Discount: {{ i.dongleofferdiscount }}</li>
+       <li>Benefits: {{ i.donglebenefits }}</li>
+       
+       
+    </p>
+    <a href="http://127.0.0.1:8000/VoizFonica/recharge/"><button>Next</button></a>
+   </div>
+   </div>
+   
+   {% endfor %}
+   
+   </div>
+
+          
+
+
+{% endblock %}

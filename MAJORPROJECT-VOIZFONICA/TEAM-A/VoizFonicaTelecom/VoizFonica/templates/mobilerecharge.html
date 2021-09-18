@@ -1,0 +1,70 @@
+{% extends "services.html" %}
+
+{% block buy %}
+
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8"> -->
+                <form action="http://127.0.0.1:8000/VoizFonica/preinvoice/" method="post">
+                    {% csrf_token %}
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Mobile number</td>
+                            <td><input name="mobno" type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Types of services</td>
+                            <td><label for="typeservices">Choose a Service:</label>
+                                <select name="typeservices" class="form-control" >
+                                <option value="Prepaid">Prepaid</option>
+                                <option value="Postpaid">Postpaid</option>
+                                
+                              </select></td>
+                        </tr>
+                        <tr>
+                            <td>Plan name</td>
+                            <td><label for="pname">Choose a Plan:</label>
+                                <select name="pname" class="form-control" >
+                                <option value="Popularplan">popularplan</option>
+                                <option value="Specialplan">specialplan</option>
+                                
+                              </select></td>
+                        </tr>
+                        <tr>
+                            <td>Plan Amount</td>
+                            <td><input name='pamount' type="text" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Payment Method</td>
+                            <td><form>
+                                  <input type="radio" id="Gpay" name="paymentmethod" value="G-Pay">
+                                  <label for="Gpay">G-pay</label><br>
+                                  <input type="radio" id="Phone pay" name="paymentmethod" value="Phone pay">
+                                  <label for="Phone pay">Phone pe</label><br>
+                                  <input type="radio" id="Credit card" name="paymentmethod" value="Credit card">
+                                  <label for="Credit card">Credit card</label>
+                                  <input type="radio" id="Debit card" name="paymentmethod" value="Debit card">
+                                  <label for="Debit card">Debit card</label>
+                                </form> </td>
+                        </tr>
+                        <tr>
+                            <td>Current date</td>
+                            <td><input name='curdate' type="hidden" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <center><button onclick="window.location.href='http://127.0.0.1:8000/VoizFonica/success'">Make Recharge</button></center>
+                            
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <!-- <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+            </div>
+        </div> -->
+{% endblock %}
+       
